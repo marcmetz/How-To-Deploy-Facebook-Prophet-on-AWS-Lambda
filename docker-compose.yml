@@ -1,0 +1,10 @@
+version: "3"
+services:
+  datascience-notebook:
+      build: .
+      volumes:
+        - ./notebooks:/home/jovyan/work
+      ports:
+        - 8888:8888
+      env_file: .env
+      container_name: lumis

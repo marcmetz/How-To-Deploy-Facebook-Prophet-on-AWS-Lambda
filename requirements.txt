@@ -1,0 +1,2 @@
+pystan==2.18
+fbprophet
