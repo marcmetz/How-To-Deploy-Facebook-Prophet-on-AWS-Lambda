@@ -1,2 +1,4 @@
 /pystan/stan/src/*
 /pystan/stan/lib/stan_math/lib/*
+*/test/*
+*/tests/*

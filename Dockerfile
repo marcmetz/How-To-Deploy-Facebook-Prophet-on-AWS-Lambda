@@ -13,5 +13,6 @@ WORKDIR /var/task/venv/lib/python3.7/site-packages
 COPY lambda_function.py .
 COPY .lambdaignore .
 
+RUN echo "Unzipped size: $(du -sh . | cut -f1)"
 RUN cat .lambdaignore | xargs zip -9qr upload-to-s3.zip * -x
-RUN echo "Package size: $(du -mh upload-to-s3.zip | cut -f1)"
+RUN echo "Zipped file size (excl. entries in .lambdaignore): $(du -mh upload-to-s3.zip | cut -f1)"
